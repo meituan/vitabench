@@ -20,7 +20,7 @@ Moreover, we propose a rubric-based sliding window evaluator, enabling robust as
 
 > *The name “Vita” derives from the Latin word for “Life”, reflecting our focus on life-serving applications.*
 
-![overall_performance](./assets/overall_performance.png)
+![overall_performance](assets/overall_performance.png)
 
 ## 🌱 Benchmark Details
 
@@ -105,18 +105,18 @@ To run a test evaluation:
 
 ```bash
 vita run \
---domain <domain> \              # support single domain (delivery/instore/ota) and cross domain ([delivery,instore,ota])
---user-llm <model name> \        # model name in models.yaml
---agent-llm <model name> \       # model name in models.yaml
---enable-think \                 # Enable think mode for the agent. Default is False.
---evaluator-llm <model name> \   # The LLM to use for evaluation.
---num-trials 1 \                 # (Optional) The number of times each task is run. Default is 1.
---num-tasks 1 \                  # (Optional) The number of tasks to run. Default is the number of all tasks.
---task-ids 1 \                   # (Optional) Run only the tasks with the given IDs. Default is run all tasks.
---max-steps 300 \                # (Optional) The maximum number of steps to run the simulation. Default is 300.
---max-concurrency 1 \            # (Optional) The maximum number of concurrent simulations to run. Default is 1.
---csv-output <csv path> \        # (Optional) Path to CSV file to append results.
---language <chinese/english> \   # (Optional) The language to use for prompts and tasks. Choices: chinese, english. Default is chinese.
+  --domain <domain> \              # support single domain (delivery/instore/ota) and cross domain ([delivery,instore,ota])
+  --user-llm <model name> \        # model name in models.yaml
+  --agent-llm <model name> \       # model name in models.yaml
+  --enable-think \                 # Enable think mode for the agent. Default is False.
+  --evaluator-llm <model name> \   # The LLM to use for evaluation.
+  --num-trials 1 \                 # (Optional) The number of times each task is run. Default is 1.
+  --num-tasks 1 \                  # (Optional) The number of tasks to run. Default is the number of all tasks.
+  --task-ids 1 \                   # (Optional) Run only the tasks with the given IDs. Default is run all tasks.
+  --max-steps 300 \                # (Optional) The maximum number of steps to run the simulation. Default is 300.
+  --max-concurrency 1 \            # (Optional) The maximum number of concurrent simulations to run. Default is 1.
+  --csv-output <csv path> \        # (Optional) Path to CSV file to append results.
+  --language <chinese/english> \   # (Optional) The language to use for prompts and tasks. Choices: chinese, english. Default is chinese.
 ```
 
 Results will be saved in `data/simulations/`.
@@ -126,10 +126,10 @@ Results will be saved in `data/simulations/`.
 Re-evaluate the simulation instead of running new ones.
 ```bash
 vita run \
---re-evaluate-file <simulation file path> \
---evaluation-type <evaluation type> \
---evaluator-llm <evaluation model> \
---save-to <new simulation file path>
+  --re-evaluate-file <simulation file path> \
+  --evaluation-type <evaluation type> \
+  --evaluator-llm <evaluation model> \
+  --save-to <new simulation file path>
 ```
 
 ### Viewing Results
