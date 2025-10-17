@@ -438,6 +438,7 @@ class Order(BaseModel):
                     f"total_price:{self.total_price}, "
                     f"create_time:{self.create_time}, "
                     f"update_time:{self.update_time}, "
+                    f"note:{self.note}, "
                     f"status:{self.status}, "
                     f"products:{self.products})"
                     )
